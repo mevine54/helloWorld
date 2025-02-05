@@ -1,0 +1,26 @@
+### Obtenir toutes les personnes
+GET http://localhost:9000/api/persons
+
+### Créer une nouvelle personne
+POST http://localhost:9000/api/person
+Content-Type: application/json
+
+{
+  "firstname": "John",
+  "lastname": "Doe"
+}
+
+### Obtenir une personne par ID
+GET http://localhost:9000/api/person/1
+
+### Mettre à jour une personne
+PUT http://localhost:9000/api/person/1
+Content-Type: application/json
+
+{
+  "firstname": "Jane",
+  "lastname": "Doe"
+}
+
+### Supprimer une personne
+DELETE http://localhost:9000/api/person/1
