@@ -21,7 +21,9 @@ jobs:
         run: mysql -u${{ secrets.DB_USER }} -p${{ secrets.DB_PASSWORD }} -e "source src/main/resources/infra/mysql/dump/springboot.sql"
 
       - name: Install Chrome Browser for Selenium
-        uses: browser-actions/setup-chrome@114.0.5735.90
+        uses: browser-actions/setup-chrome@latest
+        with:
+          chrome-version: 114.0.5735.90
 
       - name: Run Chrome Browser for version control
         run: chrome --version
@@ -31,7 +33,7 @@ jobs:
           echo "Detected Chrome version: $CHROME_VERSION"
           
           # Vérifier si une version de ChromeDriver existe pour cette version de Chrome
-          CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$CHROME_VERSION)
+          CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE_114.0.5735)
           
           if [ -z "$CHROMEDRIVER_VERSION" ]; then
             echo "Error: Unable to fetch ChromeDriver version for Chrome $CHROME_VERSION"
