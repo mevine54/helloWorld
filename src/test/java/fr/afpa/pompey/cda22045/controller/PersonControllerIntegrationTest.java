@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.is;
@@ -19,6 +20,7 @@ class PersonControllerIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
 
+    @Sql(statements = "INSERT INTO person (id, lastname, firstname) VALUES (25, 'Moi', 'Toi')", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @Test
     void getPersonsTest() throws Exception {
         mockMvc.perform(get("/api/persons"))
