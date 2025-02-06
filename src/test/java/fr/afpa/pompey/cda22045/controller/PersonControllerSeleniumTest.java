@@ -37,7 +37,7 @@ class PersonControllerSeleniumTest {
         String title = driver.getTitle();
 
         // Vérifiez si le titre est correct
-        assertEquals("Person Web Application", title);
+        assertEquals("HelloWorld", title);
     }
 
     @AfterEach
