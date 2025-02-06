@@ -17,7 +17,7 @@
 //    @BeforeEach
 //    public void setUp() {
 //        // emplacement du pilote Chrome
-//        System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
+////        System.setProperty("webdriver.chrome.driver", "driver\\chromedriver.exe");
 //
 //        // Instanciation du pilote Chrome
 //        WebDriverManager.chromedriver().setup();
