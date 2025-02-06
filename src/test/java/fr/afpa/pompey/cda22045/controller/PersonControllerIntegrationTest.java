@@ -20,7 +20,7 @@ class PersonControllerIntegrationTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Sql(statements = "INSERT INTO person ( lastname, firstname) VALUES ('Hyde', 'Jemima')", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+//    @Sql(statements = "INSERT INTO person ( lastname, firstname) VALUES ('Hyde', 'Jemima')", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @Test
     void getPersonsTest() throws Exception {
         mockMvc.perform(get("/api/persons"))
