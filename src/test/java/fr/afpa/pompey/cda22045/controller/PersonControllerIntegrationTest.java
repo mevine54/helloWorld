@@ -23,7 +23,7 @@ class PersonControllerIntegrationTest {
 
     @Test
     void getPersonsTest() throws Exception {
-        mockMvc.perform(get("/persons"))
+        mockMvc.perform(get("/api/persons"))
                 .andExpect(status().isOk())
                 .andExpect((ResultMatcher) jsonPath("$[0].firstname",is("Jemina")));
     }

@@ -26,7 +26,7 @@ class PersonControllerTest {
 
     @Test
     void getPersonTest() throws Exception {
-        mockMvc.perform(get("/persons"))
+        mockMvc.perform(get("/api/persons"))
                 .andExpect(status().isOk());
 
     }
