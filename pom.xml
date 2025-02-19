@@ -11,6 +11,7 @@
     <groupId>fr.afpa.pompey.cda22045</groupId>
     <artifactId>HelloApi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
     <name>HelloWorld</name>
     <description>HelloWorld</description>
     <url/>
@@ -27,6 +28,8 @@
         <url/>
     </scm>
     <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>21</java.version>
         <sonar.organization>cda2025</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -92,6 +95,18 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.4.2</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.example.MainClass</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
