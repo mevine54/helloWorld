@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>fr.afpa.pompey.cda22045</groupId>
-    <artifactId>HelloWorld</artifactId>
+    <artifactId>HelloApi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>HelloWorld</name>
     <description>HelloWorld</description>
