@@ -75,8 +75,8 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=mevine54_helloWorld
 
-#      - name: List files in target directory
-#        run: ls -l target/
+      - name: List files in target directory
+        run: ls -l target/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
